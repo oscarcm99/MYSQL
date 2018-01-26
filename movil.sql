@@ -6,3 +6,4 @@ CREATE TABLE TIENDAS (nombre VARCHAR(20), provincia VARCHAR(20),localidad VARCHA
 CREATE TABLE OPERADORAS (nombre VARCHAR(20), colorLogo VARCHAR(15), porcentajeCobertura VARCHAR(4), frecuenciaGSM VARCHAR(15), paginaWeb VARCHAR(30), PRIMARY KEY(nombre));
 CREATE TABLE TARIFAS (nombre VARCHAR(20), nombre_OPERADORAS VARCHAR(20), tamañoDatos INT(3), tipoDatos CHAR(2), minutosGratis INT(3), SMSgratis INT(3), PRIMARY KEY(nombre), FOREIGN KEY(nombre_OPERADORAS) REFERENCES OPERADORAS(nombre));
 CREATE TABLE MOVILES (marca VARCHAR(20),modelo VARCHAR(20),descripcion VARCHAR(50),SO VARCHAR(15),RAM INT(3),pulgadasPantalla INT(2), camaraMPX INT(2), PRIMARY KEY(marca,modelo));
+CREATE TABLE MOVIL_LIBRE(marca_MOVILES VARCHAR(20), modelo_MOVILES VARCHAR(20), precio FLOAT, FOREIGN KEY(marca_MOVILES,modelo_MOVILES) REFERENCES MOVILES(marca,modelo));
