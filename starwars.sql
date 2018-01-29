@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS star;
+CREATE DATABASE star;
+USE star
+CREATE TABLE ACTOR(codigo INT, nombre VARCHAR(40), fecha DATE, nacionalidad VARCHAR(20), PRIMARY KEY(codigo));
+CREATE TABLE PERSONAJE(codigo);
